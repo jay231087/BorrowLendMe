@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+    version="1.0"
+    xmlns="http://java.sun.com/xml/ns/persistence" >
+
+    <persistence-unit name="BORROWLENDME_db" transaction-type="RESOURCE_LOCAL"> 
+     <provider>org.hibernate.ejb.HibernatePersistence</provider>
+     <non-jta-data-source>borrowlendmedatasource</non-jta-data-source>
+     <properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+			<property name="showSql" value="true" />
+			<property name="generateDdl" value="false" />
+	</properties>
+    </persistence-unit>
+    
+</persistence>
